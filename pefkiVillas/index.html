@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Pefki Villas, Evia, Greece, summer, holiday, Grecia, Grčka, apartments, studios, apartmani, letovanje, apartamente, garsoniere, vacanța, mare">
+    <meta name="author" content="Gabriela Gradinaru">
+    <title>Pefki Villas</title>
+    <link rel="icon" href="images/icons/beach.png">
+    <script src="https://kit.fontawesome.com/44d3121616.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="mobile-menu">
+        <a id="close-btn" href="#">
+            <span class="fa-stack fa-1x">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-times fa-stack-1x"></i>                
+            </span>
+        </a>
+        <div class="container-fluid">
+            <div class="row vh-100 align-items-center">
+                <div class="col-12 text-center">
+                    <nav>
+                        <div><a class="mobile-menu-item text-uppercase h3" href="#hero-section">home</a></div>
+                        <div class="my-3"><a class="mobile-menu-item text-uppercase h3" href="#about-section">about us</a></div>
+                        <div class="mb-3"><a class="mobile-menu-item text-uppercase h3" href="#find-us-section">how to find us</a></div>
+                        <div><a class="mobile-menu-item text-uppercase h3" href="#contact-info-section">contact</a></div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header id="header-section">
+        <div class="container-fluid">
+            <div class="row align-items-center p-3" id="header">
+                <div class="col-4 d-none d-md-block">
+                    <h2 class="d-none d-md-block d-xl-none text-uppercase text-light">pefki villas</h2>
+                    <h1 class="d-none d-xl-block text-uppercase text-light">pefki villas</h1>
+                </div>
+                <div class="col-10 col-sm-9 d-md-none pr-0">
+                    <h4 class="d-sm-none text-uppercase text-light">pefki villas</h4>
+                    <h3 class="d-none d-sm-block d-md-none text-uppercase text-light">pefki villas</h3>
+                </div>
+                <div class="d-none d-md-block col-md-8 text-right">
+                    <a class="text-uppercase" href="#hero-section">home</a>
+                    <a class="text-uppercase pl-3" href="#about-section">about us</a>
+                    <a class="text-uppercase pl-3" href="#find-us-section">how to find us?</a>
+                    <a class="text-uppercase pl-3" href="#contact-info-section">contact</a>
+                </div>
+                <div class="d-md-none col-2 col-sm-3 text-right pl-0">
+                    <a id="menu-btn" href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row px-3">
+                <div class="col-12 offset-sm-6 col-sm-6  d-flex justify-content-end" id="flags">
+                    <a href="#" class="flags" id="gr">
+                        <img src="images/icons/gr.png" alt="greek flag" title="ελληνικά">
+                    </a>
+                    <a href="#" class="px-2 flags" id="eng">
+                        <img src="images/icons/uk.png" alt="british flag" title="english">
+                    </a>
+                    <a href="#" class="pr-2 flags" id="ro">
+                        <img src="images/icons/ro.png" alt="romanian flag" title="română">               
+                    </a>
+                    <a href="#" class="flags" id="sr">
+                        <img src="images/icons/sr.png" alt="serbian flag" title="srpski">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero-section">
+        <div class="container-fluid">
+            <div class="row vh-100 px-3 py-4">
+                <div class="col-12 text-light text-center d-flex justify-content-center align-items-center">
+                    <div class="pt-3">
+                        <img id="hero-logo" src="images/icons/beach.png" alt="beach logo">
+                        <h1 class="d-none d-md-block text-uppercase">YOUR HOLIDAY DESTINATION</h1>
+                        <h3 class="d-md-none text-uppercase">YOUR HOLIDAY DESTINATION</h3>
+                        <p class="lead">Perfect place to relax and enjoy the summer days</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="text-center" id="arrow-down" href="#intro-section">
+            <span class="fa-stack fa-1x">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-chevron-down fa-stack-1x"></i>
+            </span>
+        </a>
+    </section>
+
+    <section id="intro-section">
+
+        <div class="container-fluid py-3">
+            <div class="row justify-content-center">
+                <div class="col-10 col-xl-8 text-center py-5">
+                    <h2 class="d-none d-md-block text-uppercase">GREAT SUMMER VACATION</h2>
+                    <h3 class="d-md-none text-uppercase">GREAT SUMMER VACATION</h3>
+                    <p class="text-muted font-weight-normal lead">Pefki is considered one of the premier vacation destinations in North Evia, since it has a highly developed tourist infrastructure and offers excellent hotel accommodation, rooms, apartments and studios throughout the course of the year.
+                        If you want a relaxing break away from the hectic pace of everyday life, Pefki is the perfect place.
+                    </p>
+                </div>
+            </div>
+            <div class="row py-xl-5">
+                <div class="col-sm-4 text-center">
+                    <img class="intro-icon img-fluid py-3" src="images/icons/shoes.png" id="beach" alt="icon1">
+                    <p class="h5 font-weight-bold text-uppercase">LARGE BEACH</p>
+                </div>
+                <div class=" col-sm-4 text-center">
+                    <img class="intro-icon img-fluid py-3" src="images/icons/boat.png" id="boat" alt="icon2">
+                    <p class="h5 font-weight-bold text-uppercase">DAILY CRUISES</p>
+                </div>
+                <div class=" col-sm-4 text-center">
+                    <img class="intro-icon img-fluid py-3" src="images/icons/food.png" id="food" alt="icon3">
+                    <p class="h5 font-weight-bold text-uppercase">FISH TAVERNAS</p>
+                </div>
+            </div>
+            <div class="row vh-100 background-dark">
+                <div class="col-sm-11 intro-image d-flex m-auto" id="large-beach">
+                    <div class="col-sm-6 text-light m-auto" id="large-beach-text">
+                        <ul>
+                            <li>long and large beach</li>
+                            <li>well organized
+                                <ul>
+                                    <li>sun-beds and umbrellas</li>
+                                    <li>showers</li>
+                                    <li>changing cabins</li>
+                                    <li>playgrounds</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row vh-100 background-dark">
+                <div class="col-sm-11 intro-image m-auto d-flex" id="boat-cruisers">
+                    <div class="col-sm-6 text-justify m-auto text-light" id="boat-cruisers-text">
+                        <p>
+                            Cruises are organized every day or at least once per week, according to the interests of our tourists.
+                            The most populars are the trips to:
+                        </p>
+                        <ul>
+                            <li>Skiathos</li>
+                            <li>Skopelos and Alonnisos</li>
+                            <li>Lihades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row vh-100 background-dark">
+                <div class="col-sm-11 intro-image m-auto d-flex" id="tavernas" >
+                    <div class="col-sm-6 offset-sm-3 text-justify p-5 text-light"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="about-section">
+
+        <div class="container-fluid">
+            <div class="row" id="description">
+                <div class="col-12 offset-md-1 col-md-5 align-self-center p-5 px-md-0">
+                    <h3 class="d-md-none text-center text-uppercase">EXCELLENT CHOICE</h3>
+                    <h4 class="d-none d-md-block text-uppercase">EXCELLENT CHOICE</h4>
+                    <p class="text-muted font-weight-normal lead text-justify">Pefki Villas provides you rooms with the following facilities:</p>
+                    <ul class="text-muted font-weight-normal lead">
+                        <li>television</li>
+                        <li>air conditioning</li>
+                        <li>refrigerator</li>
+                        <li>kitchen</li>
+                        <li>cooking machine</li>
+                        <li>shower</li>
+                        <li>balcony</li>
+                        <li>barbecue</li>
+                        <li>playground</li>
+                        <li>parking space </li>
+                        <li>free WiFi internet access</li>
+                    </ul>
+                    <div class="col-12 pt-4 pb-2 d-md-none d-flex justify-content-center">
+                        <button class="btn btn-danger text-uppercase">PEFKI VILLAS PHOTO GALLERY</button>
+                    </div>
+                </div>
+                <div class="d-none d-md-flex offset-md-1 col-md-5" id="about-bg-1">
+                    <button class="btn btn-danger m-auto text-uppercase">PEFKI VILLAS PHOTO GALLERY</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="find-us-section">
+        <div class="container-fluid">
+            <div class="row align-items-center px-3" id="about-bg-2">
+                <div class="col-12 offset-md-6 col-md-6 text-light p-5 pl-md-0 text-justify">
+                    <h3 class="d-md-none text-uppercase text-center">HOW TO FIND US</h3>
+                    <h4 class="d-none d-md-block text-left text-uppercase">HOW TO FIND US</h4>
+                    <p class="lead font-weight-normal">
+                        If you come by car, you may be interested in the timetable of the ferries from Glypha to Agyocambos. 
+                        If so, please click on this link:
+                    </p>
+                    <div class="pb-3 text-left lead font-weight-normal">
+                        <a href="https://www.ferriesglyfa.gr/timetable-glyfa-ferries-en.php" style="color: rgb(247, 217, 203);font-weight: bold">Ferries to/from Glypha-Agyocampos</a>                    
+                    </div>
+                    <p class="lead font-weight-normal">
+                        Once in Pefki, just 100 meters from the beach Pefki Villas is ready to welcome you and your family.
+                        Close to us you can find super-markets and taverns.<br>
+                        Please have a look on the map below!
+                    </p> 
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="map-section">
+        <div id="map"></div>     
+        <button class="btn map" id="minus"><i class="fas fa-search-minus fa-3x"></i></button>
+        <button class="btn map" id="plus"><i class="fas fa-search-plus fa-3x"></i></button>
+    </section>
+
+
+    <section id="contact-info-section">
+
+        <div class="container-fluid text-light">
+            <div class="row" id="contact-info-bg-1">
+                <div class="offset-1 col-sm-5 pt-5 pb-4">
+                    <h3 class="text-uppercase">YOU ARE WELCOME!</h3>
+                    <p class="lead text-uppercase">COME ON IN!</p>
+                    <br>
+                    <h4 class="text-uppercase">CHECK-IN</h4>
+                    <p>14.00 - 18.00 </p>
+                    <br>
+                    <h4 class="text-uppercase">CHECK-OUT</h4>
+                    <p>O8.00 - 11.00 </p>
+                </div>
+                <div class="col-sm-6 pt-5 pb-4" id="contact-info-bg-2">
+                    <div class="offset-1 offset-md-2">
+                        <h3 class="text-uppercase">CONTACT</h3>
+                        <br>
+                        <h4 class="text-uppercase">PHONE</h4>
+                        <p class="lead font-weight-normal">+30 22260 41535</p>
+                        <p class="lead font-weight-normal">+30 6974 748328</p>
+                        <br>
+                        <h4 class="text-uppercase">MAIL</h4>
+                        <p class="lead font-weight-normal">info@pefkivillas.gr</p>
+                        <br>
+                        <h4 class="text-uppercase">ADDRESS</h4>
+                        <p class="lead font-weight-normal">Αρτεμίσιο 342 00, Πευκί, Ελλάδα </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    <footer id="footer-section">
+        <p>&copy; Pefki Villas 2021</p>
+    </footer>
+
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/leaflet.js"></script>
+
+    <script src="js/script.js"></script>
+
+    <script src="js/translate.js"></script>
+
+      
+</body>
+</html>
