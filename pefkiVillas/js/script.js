@@ -215,7 +215,11 @@ window.addEventListener("load", function(){
     var map = L.map('map', {
         center: [39.006525477492744, 23.210849951479815], 
         zoom: 14,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        gestureHandling: true,
+        gestureHandlingOptions:{
+            text:{touch: "Use two fingers to move the map"}
+        } 
     });
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
