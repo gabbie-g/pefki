@@ -515,6 +515,11 @@ header a[href="#"]{
         height: 480px;
     }
 }
+@media (min-height: 750px){
+    #map{
+        height: 650px;
+    }
+}
 .map {
     position: absolute;
     bottom: 0;
