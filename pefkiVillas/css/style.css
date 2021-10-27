@@ -285,10 +285,10 @@ header a[href="#"]{
     background-size: cover;
     min-height: 480px;
 }
+
 #description {
     background-color: #e0dfdf;
 }
-
 
 #bg-gallery{
     position: fixed;
@@ -312,9 +312,19 @@ header a[href="#"]{
     background-color: rgb(25, 25, 25);
     z-index: 1;
     margin: auto;
+    overflow: hidden;
 }
+
+#gallery{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+
 #gallery>img{
-    margin-right: 10px; 
+    margin-left: 10px; 
     height: 160px;
     width: 220px;
 }
@@ -362,32 +372,11 @@ header a[href="#"]{
     }
 }
 
-#gallery{
-    display: flex;
-    width: 100%;
-    overflow: auto;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-
-#gallery>img:last-child{
-    margin-right: 0;
-}
-
-
-#arrow{
-    position: absolute;
-    right: 20px;
-    font-size: 2.5rem;
-    color: #fff;
-}
-
 #container{
     position: relative;            
-    background-color: black;
     display: none;
 }
+
 @media (min-height: 550px){
     #bg-gallery{
         height: 100vh;
@@ -401,23 +390,22 @@ header a[href="#"]{
     }
 }
 
-@media (min-height: 550px) and (orientation: landscape) and (min-width: 1150px){
-    #arrow::before{
-        display: none;
-    }
+#arrow-left{
+    position: absolute;
+    left: 20px;
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: rgba(32, 32, 32, 0.815);
+    padding: 5px;
 }
 
-#image-background {
+#arrow-right{
     position: absolute;
-    width: 100%;
-    height:100%;
-    left: 0;
-    right: 0;
-    filter: blur(5px);
-    background-repeat : no-repeat;
-    background-position : center;
-    background-size : cover;
-    background-clip: content-box;
+    right: 20px;
+    font-size: 2.5rem;
+    color: #fff;
+    background-color: rgba(32, 32, 32, 0.815);
+    padding: 5px;
 }
 
 #image-container{
@@ -427,17 +415,9 @@ header a[href="#"]{
     right: 0;
     top: 0;
     bottom: 0;
-    width: 55%;
-    height: 90%;
     background-repeat : no-repeat;
     background-position : center;
     background-size : cover;
-}
-
-@media (orientation: portrait), (min-height: 900px) and (orientation: landscape){
-    #image-container{
-        width: 90%;
-    }
 }
 
 #about-bg-2 {
@@ -477,6 +457,7 @@ header a[href="#"]{
 #boat-cruisers-text{
     background-color: rgba(24, 24, 24, 0.411);
 }
+
 /***************************************MENU SECTION*********************/
 
 #menu-section {
