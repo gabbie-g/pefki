@@ -143,7 +143,7 @@ window.addEventListener("load", function(){
                         images[j].addEventListener("click", function(){
 
                             imageContainer.style.backgroundImage = "url(" + images[j].src + ")";
-                            localStorage.setItem("selected-image", images[j].id);
+                            localStorage.setItem("selected-image", images[j].id - 1);
 
                             if(photoGallery.clientHeight < 550){
                                 if(interval){
@@ -156,13 +156,7 @@ window.addEventListener("load", function(){
                         });
                     }
 
-
-                    if(localStorage.getItem("selected-image") != null){
-                        imageContainer.style.backgroundImage =  "url(" + gallery.children[localStorage.getItem("selected-image")].src + ")";
-                    } else {
-                        imageContainer.style.backgroundImage = "url(" + data[0].thumbnail.url + ")";
-                    }
-
+                    
                     let gallery1 = gallery.cloneNode(true);
                     gallery1.style.filter = 'blur(0.5px)';
                     photoGallery.insertBefore(gallery1, container);
@@ -173,7 +167,7 @@ window.addEventListener("load", function(){
                         images1[j].addEventListener("click", function(){
 
                             imageContainer.style.backgroundImage = "url(" + images1[j].src + ")";
-                            localStorage.setItem("selected-image", (images1[j].id - 1));
+                            localStorage.setItem("selected-image", images1[j].id - 1);
 
                             if(photoGallery.clientHeight < 550){
                                 if(interval){
@@ -222,6 +216,14 @@ window.addEventListener("load", function(){
                             imageContainer.style.backgroundImage =   "url(" + gallery.children[parseInt(localStorage.getItem("selected-image"))].src + ")";
                         }
                     });
+                    
+                    if(localStorage.getItem("selected-image") != null){
+                        imageContainer.style.backgroundImage =  "url(" + gallery.children[localStorage.getItem("selected-image")].src + ")";
+                    } else {
+                        imageContainer.style.backgroundImage = "url(" + data[0].thumbnail.url + ")";
+                        localStorage.setItem("selected-image", 0);
+
+                    }
 
                 }
                 catch(err){
