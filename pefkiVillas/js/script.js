@@ -123,6 +123,7 @@ window.addEventListener("load", function(){
                     arrowLeft.classList.add("fas");
                     arrowLeft.classList.add("fa-chevron-left");
                     arrowLeft.id = "arrow-left";
+                    arrowLeft.classList.add("arrow");
                     arrowLeft.style.top = container.clientHeight/2 - arrowLeft.clientHeight/2 + 'px';
 
                     
@@ -131,6 +132,7 @@ window.addEventListener("load", function(){
                     arrowRight.classList.add("fas");
                     arrowRight.classList.add("fa-chevron-right");
                     arrowRight.id = "arrow-right";
+                    arrowRight.classList.add("arrow");
                     arrowRight.style.top = container.clientHeight/2 - arrowRight.clientHeight/2 + 'px';
 
 
