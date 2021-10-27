@@ -63,10 +63,12 @@ window.addEventListener("load", function(){
                     let bgGallery = document.createElement("div");
                     document.body.appendChild(bgGallery);
                     bgGallery.id = "bg-gallery";
+                    bgGallery.classList.add('light-box');
 
                     let photoGallery = document.createElement("div");
                     bgGallery.appendChild(photoGallery);
                     photoGallery.id = "photo-gallery";
+                    photoGallery.classList.add('multi-carousel');
                     console.log(photoGallery.clientHeight);
 
                     var header = document.createElement("h2");
@@ -91,9 +93,8 @@ window.addEventListener("load", function(){
                     let gallery = document.createElement("div");
                     photoGallery.appendChild(gallery);
                     gallery.id = "gallery";
+                    gallery.classList.add('multi-carousel-inner');
 
-
-                    let headerStyle = window.getComputedStyle(header);
 
                     data = data.images;
 
@@ -101,14 +102,9 @@ window.addEventListener("load", function(){
                     container.id = "container";
                     photoGallery.appendChild(container);
 
-                    var imageBackground = document.createElement("div");
-                    imageBackground.id = "image-background";
-                    container.appendChild(imageBackground);
-
                     var imageContainer = document.createElement("div");
                     imageContainer.id = "image-container";
                     container.appendChild(imageContainer);
-
 
 
                     for(let i=0; i < data.length; i++){
@@ -116,52 +112,116 @@ window.addEventListener("load", function(){
                         let image = data[i].thumbnail;
 
                         gallery.innerHTML += "<img src=" + image.url + " id=" + data[i].id + " width=" + image.width
-                            + " height=" + image.height + " title=" + data[i].title + " class='gallery-images'>";
+                            + " height=" + image.height + " title=" + data[i].title + " class='gallery-images multi-carousel-item'>";
 
                         container.style.height = $(photoGallery).height() - $(header).outerHeight(true) - $(gallery).outerHeight(true) + "px";
                     }
 
-                    let arrow = document.createElement("i");
-                    photoGallery.appendChild(arrow);
-                    arrow.classList.add("fas");
-                    arrow.classList.add("fa-chevron-right");
-                    arrow.id = "arrow";
-                    arrow.style.top = parseFloat(window.getComputedStyle(photoGallery).paddingTop) + header.clientHeight + parseFloat(headerStyle.marginBottom) + gallery.clientHeight/2 - arrow.clientHeight/2 + "px";
+
+                    let arrowLeft = document.createElement("i");
+                    container.appendChild(arrowLeft);
+                    arrowLeft.classList.add("fas");
+                    arrowLeft.classList.add("fa-chevron-left");
+                    arrowLeft.id = "arrow-left";
+                    arrowLeft.style.top = container.clientHeight/2 - arrowLeft.clientHeight/2 + 'px';
+
+                    
+                    let arrowRight = document.createElement("i");
+                    container.appendChild(arrowRight);
+                    arrowRight.classList.add("fas");
+                    arrowRight.classList.add("fa-chevron-right");
+                    arrowRight.id = "arrow-right";
+                    arrowRight.style.top = container.clientHeight/2 - arrowRight.clientHeight/2 + 'px';
+
+
+                    let interval;
 
                     var images = document.getElementsByClassName("gallery-images");
-                    let sum = 0;
-
 
                     for(let j = 0; j < images.length; j++){
                         
-                        sum += images[j].clientWidth;
+                        images[j].addEventListener("click", function(){
 
-                        images[j].addEventListener("mouseenter", function(){
-
-                            imageBackground.style.backgroundImage = 'url(' + images[j].src + ')';
                             imageContainer.style.backgroundImage = "url(" + images[j].src + ")";
-
                             localStorage.setItem("selected-image", images[j].id);
+
+                            if(photoGallery.clientHeight < 550){
+                                if(interval){
+                                    cancelAnimationFrame(interval);
+                                    interval = undefined;
+                                }else{
+                                    interval = requestAnimationFrame(update);
+                                }
+                            }
                         });
                     }
-
-                    gallery.addEventListener("scroll", function(){
-
-                        if(gallery.scrollLeft + gallery.clientWidth > sum){
-                            arrow.style.display = "none";
-                        } else {
-                            arrow.style.display = "block";
-                        }
-                    })
 
 
                     if(localStorage.getItem("selected-image") != null){
                         imageContainer.style.backgroundImage =  "url(" + gallery.children[localStorage.getItem("selected-image") - 1].src + ")";
-                        imageBackground.style.backgroundImage = 'url(' + gallery.children[localStorage.getItem("selected-image") - 1].src + ')';
                     } else {
                         imageContainer.style.backgroundImage = "url(" + data[0].thumbnail.url + ")";
-                        imageBackground.style.backgroundImage = 'url(' + data[0].thumbnail.url + ')';
                     }
+
+                    let gallery1 = gallery.cloneNode(true);
+                    gallery1.style.filter = 'blur(0.5px)';
+                    photoGallery.insertBefore(gallery1, container);
+                    var images1 = gallery1.getElementsByClassName("gallery-images");
+                    console.log(images1.length);
+                    for(let j = 0; j < images1.length; j++){
+                        
+                        images1[j].addEventListener("click", function(){
+
+                            imageContainer.style.backgroundImage = "url(" + images1[j].src + ")";
+                            localStorage.setItem("selected-image", (images1[j].id - 1));
+
+                            if(photoGallery.clientHeight < 550){
+                                if(interval){
+                                    cancelAnimationFrame(interval);
+                                    interval = undefined;
+                                }else{
+                                    interval = requestAnimationFrame(update);
+                                }
+                            }
+
+                        });
+                    }
+                    container.style.top =  gallery.clientHeight + parseFloat(window.getComputedStyle(gallery).marginBottom) + "px";
+
+                    let pos = 0;
+                    function update(){             
+                        if(parseInt(gallery.style.left) <= -gallery.scrollWidth){
+                            gallery.style.left = 0;
+                            gallery1.style.left = gallery.scrollWidth + 'px';
+                            pos = 0;
+                        } 
+                           
+                        pos--;
+                        gallery.style.left = pos + 'px';
+                        gallery1.style.left = gallery.scrollWidth + pos + 'px';
+                        interval = requestAnimationFrame(update);
+                    }
+                    update();
+            
+                    arrowLeft.onclick = ()=>{
+                        if (localStorage.getItem("selected-image") =="0"){
+                            localStorage.setItem("selected-image", images1.length - 1);
+                            imageContainer.style.backgroundImage =   "url(" + gallery.children[parseInt(localStorage.getItem("selected-image"))].src + ")";
+                        } else {
+                            localStorage.setItem("selected-image", parseInt(localStorage.getItem("selected-image")) - 1);
+                            imageContainer.style.backgroundImage = `url(${gallery.children[parseInt(localStorage.getItem("selected-image"))].src})`;
+                        }
+                    };
+                    arrowRight.addEventListener("click", ()=>{
+
+                        if (localStorage.getItem("selected-image") == images1.length - 1){
+                            localStorage.setItem("selected-image", "0");
+                            imageContainer.style.backgroundImage =   "url(" + gallery.children[parseInt(localStorage.getItem("selected-image"))].src + ")";
+                        } else {
+                            localStorage.setItem("selected-image", parseInt(localStorage.getItem("selected-image")) + 1);
+                            imageContainer.style.backgroundImage =   "url(" + gallery.children[parseInt(localStorage.getItem("selected-image"))].src + ")";
+                        }
+                    });
 
                 }
                 catch(err){
