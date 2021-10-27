@@ -390,22 +390,21 @@ header a[href="#"]{
     }
 }
 
-#arrow-left{
+.arrow{
     position: absolute;
-    left: 20px;
     font-size: 2.5rem;
     color: #fff;
-    background-color: rgba(32, 32, 32, 0.815);
-    padding: 5px;
+    background-color: rgba(32, 32, 32, 0.568);
+    padding: 5px 10px;
+    border-radius: 4px;
+
+}
+#arrow-left{
+    left: 20px;
 }
 
 #arrow-right{
-    position: absolute;
     right: 20px;
-    font-size: 2.5rem;
-    color: #fff;
-    background-color: rgba(32, 32, 32, 0.815);
-    padding: 5px;
 }
 
 #image-container{
