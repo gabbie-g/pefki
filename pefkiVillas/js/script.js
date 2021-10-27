@@ -158,7 +158,7 @@ window.addEventListener("load", function(){
 
 
                     if(localStorage.getItem("selected-image") != null){
-                        imageContainer.style.backgroundImage =  "url(" + gallery.children[localStorage.getItem("selected-image") - 1].src + ")";
+                        imageContainer.style.backgroundImage =  "url(" + gallery.children[localStorage.getItem("selected-image")].src + ")";
                     } else {
                         imageContainer.style.backgroundImage = "url(" + data[0].thumbnail.url + ")";
                     }
