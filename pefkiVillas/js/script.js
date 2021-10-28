@@ -6,6 +6,7 @@ window.addEventListener("load", function(){
 
     let beach = document.getElementById("beach");
     beach.onclick = function(){
+        document.body.style.overflow = "hidden";
         let largeBeach = document.getElementById("large-beach");
         let backgroundBeach = document.getElementsByClassName("background-dark")[0];
         backgroundBeach.style.display = "flex";
@@ -13,11 +14,19 @@ window.addEventListener("load", function(){
         largeBeach.appendChild(closeBtn);
         closeBtn.addEventListener("click", function(){
             backgroundBeach.style.display = "none";
-        })
+            document.body.style.overflow = "auto";
+        });
+        document.onkeyup = (event)=>{
+            if(event.key == "Escape"){
+                backgroundBeach.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
     }
 
     let boat = document.getElementById("boat");
     boat.onclick = function(){
+        document.body.style.overflow = "hidden";
         let boatCruisers = document.getElementById("boat-cruisers");
         let backgroundBoat = document.getElementsByClassName("background-dark")[1];
         backgroundBoat.style.display = "flex";
@@ -25,11 +34,19 @@ window.addEventListener("load", function(){
         boatCruisers.appendChild(closeBtn);
         closeBtn.addEventListener("click", function(){
             backgroundBoat.style.display = "none";
-        })
+            document.body.style.overflow = "auto";
+        });
+        document.onkeyup = (event)=>{
+            if(event.key == "Escape"){
+                backgroundBoat.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
     }
 
     let taverna = document.getElementById("food");
     taverna.onclick = function(){
+        document.body.style.overflow = "hidden";
         let fishTavernas = document.getElementById("tavernas");
         let backgroundTaverna = document.getElementsByClassName("background-dark")[2];
         backgroundTaverna.style.display = "flex";
@@ -37,7 +54,14 @@ window.addEventListener("load", function(){
         fishTavernas.appendChild(closeBtn);
         closeBtn.addEventListener("click", function(){
             backgroundTaverna.style.display = "none";
-        })
+            document.body.style.overflow = "auto";
+        });
+        document.onkeyup = (event)=>{
+            if(event.key == "Escape"){
+                backgroundTaverna.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
     }
 
 
@@ -56,48 +80,44 @@ window.addEventListener("load", function(){
                     }
 
                     let data = await response.json();
-                    console.log(data);
                     data = data.gallery;
-                    console.log(data);
+                    
+                    document.body.style.overflow = "hidden";
 
                     let bgGallery = document.createElement("div");
                     document.body.appendChild(bgGallery);
                     bgGallery.id = "bg-gallery";
-                    bgGallery.classList.add('light-box');
 
                     let photoGallery = document.createElement("div");
                     bgGallery.appendChild(photoGallery);
                     photoGallery.id = "photo-gallery";
-                    photoGallery.classList.add('multi-carousel');
-                    console.log(photoGallery.clientHeight);
 
                     var header = document.createElement("h2");
                     header.innerHTML = data.name;
                     header.style.color = "white";
                     photoGallery.appendChild(header);
 
+
                     photoGallery.appendChild(closeBtn);
                     let h = header.clientHeight - closeBtn.clientHeight;
-                    console.log(header.clientHeight);
-                    console.log(closeBtn.clientHeight);
-                    console.log(h/2);
                     var style = photoGallery.currentStyle || window.getComputedStyle(photoGallery);
-
-                    console.log('padding-top: ' + parseInt(style.paddingTop) + parseFloat(h/2));
                     closeBtn.style.top = parseInt(style.paddingTop) + h/2 + "px";
-                    console.log(closeBtn.style.top);
                     closeBtn.addEventListener("click", function(){
                         bgGallery.style.display = "none";
-                    })
+                        document.body.style.overflow = "auto";
+                    });
+                    document.onkeydown = (event)=>{
+                        if(event.key == "Escape"){
+                            bgGallery.style.display = "none";
+                            document.body.style.overflow = "auto";
+                        }
+                    };
 
                     let gallery = document.createElement("div");
                     photoGallery.appendChild(gallery);
                     gallery.id = "gallery";
                     gallery.classList.add('multi-carousel-inner');
-
-
-                    data = data.images;
-
+                  
                     var container = document.createElement("div");
                     container.id = "container";
                     photoGallery.appendChild(container);
@@ -106,7 +126,7 @@ window.addEventListener("load", function(){
                     imageContainer.id = "image-container";
                     container.appendChild(imageContainer);
 
-
+                    data = data.images;
                     for(let i=0; i < data.length; i++){
 
                         let image = data[i].thumbnail;
