@@ -30,6 +30,7 @@
 body{
     max-width: 1200px;
     margin: auto;
+    overflow: auto;
 }
 
 
@@ -77,7 +78,7 @@ header a[href="#"]{
     z-index: 1;
 }
 
-#header-section div#flags img{
+div#flags img{
     width: 30px;
     height: 30px;
 }
@@ -184,9 +185,9 @@ header a[href="#"]{
     .fa-stack{
         font-size: 25px;
     }
-    #hero-logo {
+    /* #hero-logo {
         width: 100px;
-    }
+    } */
 }
 
 
@@ -195,7 +196,7 @@ header a[href="#"]{
         font-size: 40px;
     }
     #hero-logo {
-        width: 120px;
+        width: 100px;
     }
 }
 
@@ -216,14 +217,14 @@ header a[href="#"]{
 }
 .background-dark{
     position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
+    top     : 0;
+    right   : 0;
+    left    : 0;
+    margin  : 0 auto;
     background-color: rgba(25, 25, 25, 0.4);
-    max-width: 1200px;
-    display: none;
-    z-index: 1;
+    max-width       : 1200px;
+    display : none;
+    z-index : 1;
 }
 .intro-image {
     position: relative;
@@ -261,13 +262,14 @@ header a[href="#"]{
 
 #close-button{
     position: absolute;
-    right: 16px;
-    width: 38px;
-    height: 38px;
-    background-image: url(../gallery-images/close-icon.svg), linear-gradient(rgba(49, 49, 49, 0.445), rgba(70, 69, 69, 0.507));
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
+    right   : 16px;
+    top     : 16px;
+    width   : 38px;
+    height  : 38px;
+    background-image    : url(../gallery-images/close-icon.svg), linear-gradient(rgba(49, 49, 49, 0.445), rgba(70, 69, 69, 0.507));
+    background-repeat   : no-repeat;
+    background-position : center;
+    border-radius       : 50%;
 }
 
 #close-button:hover{
@@ -279,11 +281,11 @@ header a[href="#"]{
 /***************************************ABOUT SECTION*********************/
 
 #about-bg-1 {
-    background-image: url(../images/villa.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    min-height: 480px;
+    background-image    : url(../images/villa.jpg);
+    background-repeat   : no-repeat;
+    background-position : center;
+    background-size     : cover;
+    min-height          : 480px;
 }
 
 #description {
@@ -302,122 +304,88 @@ header a[href="#"]{
     max-width: 1200px;
     display: flex;
 }
-
+#gallery-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+#gallery-close-button{
+    width: 32px;
+    height: 32px;
+    background-image    : url(../gallery-images/close-icon.svg);
+    cursor: pointer;
+}
+#gallery-close-button:hover{
+    transform: scale(1.2);
+}
 #photo-gallery {
-    position: relative;
     width: 95%;
     height: 95%;
     max-height: 1000px;
-    padding: 10px 16px;
+    padding: 10px 16px 16px;
     background-color: rgb(25, 25, 25);
     z-index: 1;
     margin: auto;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
 }
-
-#gallery{
+#gallery-container{
+    overflow: hidden;
     display: flex;
-    width: 100%;
-    margin-bottom: 20px;
-    position: absolute;
+    flex-grow: 1;
+}
+.gallery{
+    display: flex;
+    position: relative;
 }
 
-
-#gallery>img{
-    margin-left: 10px; 
-    height: 160px;
-    width: 220px;
-}
-@media (min-height: 280px){
-    #gallery>img{
-        height: 200px;
-        width: 260px;
-        }
-}
-@media (min-height: 320px){
-    #gallery>img{
-        height: 220px;
-        width: 280px;
-        }
-}
-
-@media (min-height: 360px){
-    #gallery>img{
-        height: 240px;
-        width: 320px;
-    }
-}
-@media (min-height: 380px){
-    #gallery>img{
-        height: 260px;
-        width: 340px;
-    }
-}
-@media (min-height: 400px){
-    #gallery>img{
-        height: 280px;
-        width: 370px;
-    }
-}
-@media (min-height: 450px){
-    #gallery>img{
-        height: 330px;
-        width: 400px;
-    }
-}
-@media (min-height: 500px){
-    #gallery>img{
-        height: 360px;
-        width: 430px;
-    }
+.gallery>img{
+    margin-right: 8px; 
+    height: 100%;
 }
 
 #container{
     position: relative;            
     display: none;
+    flex-grow: 1;
+    background-repeat : no-repeat;
+    background-position : center;
+    background-size : cover;
 }
 
-@media (min-height: 550px){
-    #bg-gallery{
-        height: 100vh;
+@media (min-height: 540px){
+    #gallery-container{
+        margin-bottom: 20px;
+        flex-grow: 0;
     }
     #container{
-        display: block;
+        display: flex;
     }
-    #gallery>img{
+    .gallery>img{
         height: 100px;
-        width: 130px;
     }
 }
 
+#arrow-container{
+    flex-grow: 1;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .arrow{
-    position: absolute;
     font-size: 2.5rem;
     color: #fff;
     background-color: rgba(32, 32, 32, 0.568);
     padding: 5px 10px;
     border-radius: 4px;
+
 }
 
-#arrow-left{
-    left: 20px;
-}
 
-#arrow-right{
-    right: 20px;
-}
-
-#image-container{
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-repeat : no-repeat;
-    background-position : center;
-    background-size : cover;
-}
 
 #about-bg-2 {
     position: relative;
@@ -456,7 +424,6 @@ header a[href="#"]{
 #boat-cruisers-text{
     background-color: rgba(24, 24, 24, 0.411);
 }
-
 /***************************************MENU SECTION*********************/
 
 #menu-section {
@@ -500,6 +467,7 @@ header a[href="#"]{
         height: 650px;
     }
 }
+
 .map {
     position: absolute;
     bottom: 0;

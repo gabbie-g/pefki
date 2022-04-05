@@ -94,17 +94,6 @@
                     "width": "100%",
                     "title": "Pefki-Villas",
                     "thumbnail": {
-                        "url": "gallery-images/room-03.jpg",
-                        "height": 100,
-                        "width": 130
-                    },
-                    "show": true
-                },
-                {
-                    "id": 10,
-                    "width": "100%",
-                    "title": "Pefki-Villas",
-                    "thumbnail": {
                         "url": "gallery-images/room-04.jpg",
                         "height": 100,
                         "width": 130
@@ -112,18 +101,7 @@
                     "show": true
                 },
                 {
-                    "id": 11,
-                    "width": "100%",
-                    "title": "Pefki-Villas",
-                    "thumbnail": {
-                        "url": "gallery-images/room-05.jpg",
-                        "height": 100,
-                        "width": 130
-                    },
-                    "show": true
-                },
-                {
-                    "id": 12,
+                    "id": 10,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -134,7 +112,7 @@
                     "show": true
                 },
                 {
-                    "id": 13,
+                    "id": 11,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -145,7 +123,7 @@
                     "show": true
                 },
                 {
-                    "id": 14,
+                    "id": 12,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -156,7 +134,7 @@
                     "show": true
                 },
                 {
-                    "id": 15,
+                    "id": 13,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -167,7 +145,7 @@
                     "show": true
                 },
                 {
-                    "id": 16,
+                    "id": 14,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -178,7 +156,7 @@
                     "show": true
                 },
                 {
-                    "id": 17,
+                    "id": 15,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -189,7 +167,7 @@
                     "show": true
                 },
                 {
-                    "id": 18,
+                    "id": 16,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -200,7 +178,7 @@
                     "show": true
                 },
                 {
-                    "id": 19,
+                    "id": 17,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -211,7 +189,7 @@
                     "show": true
                 },
                 {
-                    "id": 20,
+                    "id": 18,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -222,7 +200,7 @@
                     "show": true
                 },
                 {
-                    "id": 21,
+                    "id": 19,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -233,7 +211,7 @@
                     "show": true
                 },
                 {
-                    "id": 22,
+                    "id": 20,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {
@@ -244,7 +222,7 @@
                     "show": true
                 },
                 {
-                    "id": 23,
+                    "id": 21,
                     "width": "100%",
                     "title": "Pefki,Evia",
                     "thumbnail": {

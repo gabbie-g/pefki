@@ -4,61 +4,49 @@ window.addEventListener("load", function(){
     var closeBtn = document.createElement("div");
     closeBtn.id = "close-button";
 
-    let beach = document.getElementById("beach");
-    beach.onclick = function(){
+    $("#beach")[0].onclick = function(){
         document.body.style.overflow = "hidden";
-        let largeBeach = document.getElementById("large-beach");
-        let backgroundBeach = document.getElementsByClassName("background-dark")[0];
-        backgroundBeach.style.display = "flex";
-        closeBtn.style.top = "16px";
-        largeBeach.appendChild(closeBtn);
+        $(".background-dark")[0].style.display = "flex";
+        $("#large-beach")[0].appendChild(closeBtn);
         closeBtn.addEventListener("click", function(){
-            backgroundBeach.style.display = "none";
+            $(".background-dark")[0].style.display = "none";
             document.body.style.overflow = "auto";
         });
         document.onkeyup = (event)=>{
             if(event.key == "Escape"){
-                backgroundBeach.style.display = "none";
+                $(".background-dark")[0].style.display = "none";
                 document.body.style.overflow = "auto";
             }
         }
     }
 
-    let boat = document.getElementById("boat");
-    boat.onclick = function(){
+    $("#boat")[0].onclick = function(){
         document.body.style.overflow = "hidden";
-        let boatCruisers = document.getElementById("boat-cruisers");
-        let backgroundBoat = document.getElementsByClassName("background-dark")[1];
-        backgroundBoat.style.display = "flex";
-        closeBtn.style.top = "16px";
-        boatCruisers.appendChild(closeBtn);
+        $(".background-dark")[1].style.display = "flex";
+        $("#boat-cruisers")[0].appendChild(closeBtn);
         closeBtn.addEventListener("click", function(){
-            backgroundBoat.style.display = "none";
+            $(".background-dark")[1].style.display = "none";
             document.body.style.overflow = "auto";
         });
         document.onkeyup = (event)=>{
             if(event.key == "Escape"){
-                backgroundBoat.style.display = "none";
+                $(".background-dark")[1].style.display = "none";
                 document.body.style.overflow = "auto";
             }
         }
     }
 
-    let taverna = document.getElementById("food");
-    taverna.onclick = function(){
+    $("#food")[0].onclick = function(){
         document.body.style.overflow = "hidden";
-        let fishTavernas = document.getElementById("tavernas");
-        let backgroundTaverna = document.getElementsByClassName("background-dark")[2];
-        backgroundTaverna.style.display = "flex";
-        closeBtn.style.top = "16px";
-        fishTavernas.appendChild(closeBtn);
+        $(".background-dark")[2].style.display = "flex";
+        $("#tavernas")[0].appendChild(closeBtn);
         closeBtn.addEventListener("click", function(){
-            backgroundTaverna.style.display = "none";
+            $(".background-dark")[2].style.display = "none";
             document.body.style.overflow = "auto";
         });
         document.onkeyup = (event)=>{
             if(event.key == "Escape"){
-                backgroundTaverna.style.display = "none";
+                $(".background-dark")[2].style.display = "none";
                 document.body.style.overflow = "auto";
             }
         }
@@ -80,94 +68,96 @@ window.addEventListener("load", function(){
                     }
 
                     let data = await response.json();
+                    //console.log(data);
                     data = data.gallery;
-                    
+                    //console.log(data);
+
                     document.body.style.overflow = "hidden";
 
-                    let bgGallery = document.createElement("div");
-                    document.body.appendChild(bgGallery);
-                    bgGallery.id = "bg-gallery";
+                    let bg_gallery = document.createElement("div");
+                    document.body.appendChild(bg_gallery);
+                    bg_gallery.id = "bg-gallery";
 
-                    let photoGallery = document.createElement("div");
-                    bgGallery.appendChild(photoGallery);
-                    photoGallery.id = "photo-gallery";
-
-                    var header = document.createElement("h2");
-                    header.innerHTML = data.name;
-                    header.style.color = "white";
-                    photoGallery.appendChild(header);
+                    let photo_gallery = document.createElement("div");
+                    bg_gallery.appendChild(photo_gallery);
+                    photo_gallery.id = "photo-gallery";
 
 
-                    photoGallery.appendChild(closeBtn);
-                    let h = header.clientHeight - closeBtn.clientHeight;
-                    var style = photoGallery.currentStyle || window.getComputedStyle(photoGallery);
-                    closeBtn.style.top = parseInt(style.paddingTop) + h/2 + "px";
-                    closeBtn.addEventListener("click", function(){
-                        bgGallery.style.display = "none";
-                        document.body.style.overflow = "auto";
-                    });
-                    document.onkeydown = (event)=>{
-                        if(event.key == "Escape"){
-                            bgGallery.style.display = "none";
+                    let header = document.createElement("div");
+                        let text = document.createElement("h2");
+                        header.appendChild(text);
+                        text.innerHTML = data.name;
+                        text.style.color = "white";
+                        let close_btn = document.createElement("div");
+                        close_btn.id = "gallery-close-button";
+                        header.appendChild(close_btn);
+                        header.id = "gallery-header";
+
+                        close_btn.addEventListener("click", function(){
+                            bg_gallery.style.display = "none";
                             document.body.style.overflow = "auto";
-                        }
-                    };
+                        });
+                        document.onkeyup = (event)=>{
+                            if(event.key == "Escape"){
+                                bg_gallery.style.display = "none";
+                                document.body.style.overflow = "auto";
+                            }
+                        };
+                    photo_gallery.appendChild(header);
 
+
+                    let gallery_container = document.createElement("div");
+                    gallery_container.id = "gallery-container";
+                    photo_gallery.appendChild(gallery_container);
                     let gallery = document.createElement("div");
-                    photoGallery.appendChild(gallery);
-                    gallery.id = "gallery";
-                    gallery.classList.add('multi-carousel-inner');
-                  
-                    var container = document.createElement("div");
-                    container.id = "container";
-                    photoGallery.appendChild(container);
-
-                    var imageContainer = document.createElement("div");
-                    imageContainer.id = "image-container";
-                    container.appendChild(imageContainer);
+                    gallery.classList.add('gallery');
+                    gallery_container.appendChild(gallery);
 
                     data = data.images;
+
                     for(let i=0; i < data.length; i++){
 
                         let image = data[i].thumbnail;
 
-                        gallery.innerHTML += "<img src=" + image.url + " id=" + data[i].id + " width=" + image.width
-                            + " height=" + image.height + " title=" + data[i].title + " class='gallery-images multi-carousel-item'>";
+                        gallery.innerHTML += `<img src=${image.url} id=${data[i].id} height=${image.height} title=${data[i].title} class='gallery-images'>`;
 
-                        container.style.height = $(photoGallery).height() - $(header).outerHeight(true) - $(gallery).outerHeight(true) + "px";
                     }
 
 
-                    let arrowLeft = document.createElement("i");
-                    container.appendChild(arrowLeft);
-                    arrowLeft.classList.add("fas");
-                    arrowLeft.classList.add("fa-chevron-left");
-                    arrowLeft.id = "arrow-left";
-                    arrowLeft.classList.add("arrow");
-                    arrowLeft.style.top = container.clientHeight/2 - arrowLeft.clientHeight/2 + 'px';
+                    var container = document.createElement("div");
+                    container.id = "container";
+                    photo_gallery.appendChild(container);
 
-                    
-                    let arrowRight = document.createElement("i");
-                    container.appendChild(arrowRight);
-                    arrowRight.classList.add("fas");
-                    arrowRight.classList.add("fa-chevron-right");
-                    arrowRight.id = "arrow-right";
-                    arrowRight.classList.add("arrow");
-                    arrowRight.style.top = container.clientHeight/2 - arrowRight.clientHeight/2 + 'px';
+                        let arrow_container = document.createElement("div");
+                        arrow_container.id = "arrow-container";
+
+                        let arrowLeft = document.createElement("i");
+                        arrow_container.appendChild(arrowLeft);
+                        arrowLeft.classList.add("fas");
+                        arrowLeft.classList.add("fa-chevron-left");
+                        arrowLeft.classList.add("arrow");
+
+                        let arrowRight = document.createElement("i");
+                        arrow_container.appendChild(arrowRight);
+                        arrowRight.classList.add("fas");
+                        arrowRight.classList.add("fa-chevron-right");
+                        arrowRight.classList.add("arrow");
+
+                    container.appendChild(arrow_container);
+
 
 
                     let interval;
 
-                    var images = document.getElementsByClassName("gallery-images");
-
+                    var images = gallery.getElementsByClassName("gallery-images");
                     for(let j = 0; j < images.length; j++){
                         
                         images[j].addEventListener("click", function(){
 
-                            imageContainer.style.backgroundImage = "url(" + images[j].src + ")";
+                            container.style.backgroundImage = `url(${images[j].src})`;
                             localStorage.setItem("selected-image", images[j].id - 1);
 
-                            if(photoGallery.clientHeight < 550){
+                            if(photo_gallery.clientHeight < 540){
                                 if(interval){
                                     cancelAnimationFrame(interval);
                                     interval = undefined;
@@ -178,20 +168,19 @@ window.addEventListener("load", function(){
                         });
                     }
 
-                    
-                    let gallery1 = gallery.cloneNode(true);
-                    gallery1.style.filter = 'blur(0.5px)';
-                    photoGallery.insertBefore(gallery1, container);
-                    var images1 = gallery1.getElementsByClassName("gallery-images");
-                    console.log(images1.length);
-                    for(let j = 0; j < images1.length; j++){
+
+
+                    let gallery_1 = gallery.cloneNode(true);
+                    gallery_container.appendChild(gallery_1);
+                    var images_1 = gallery_1.getElementsByClassName("gallery-images");
+                    for(let i = 0; i < images_1.length; i++){
                         
-                        images1[j].addEventListener("click", function(){
+                        images_1[i].addEventListener("click", function(){
 
-                            imageContainer.style.backgroundImage = "url(" + images1[j].src + ")";
-                            localStorage.setItem("selected-image", images1[j].id - 1);
+                            container.style.backgroundImage = "url(" + images_1[i].src + ")";
+                            localStorage.setItem("selected-image", images_1[i].id - 1);
 
-                            if(photoGallery.clientHeight < 550){
+                            if(photo_gallery.clientHeight < 540){
                                 if(interval){
                                     cancelAnimationFrame(interval);
                                     interval = undefined;
@@ -202,50 +191,51 @@ window.addEventListener("load", function(){
 
                         });
                     }
-                    container.style.top =  gallery.clientHeight + parseFloat(window.getComputedStyle(gallery).marginBottom) + "px";
 
                     let pos = 0;
                     function update(){             
                         if(parseInt(gallery.style.left) <= -gallery.scrollWidth){
                             gallery.style.left = 0;
-                            gallery1.style.left = gallery.scrollWidth + 'px';
+                            gallery_1.style.left = gallery.scrollWidth + 'px';
                             pos = 0;
                         } 
                            
                         pos--;
                         gallery.style.left = pos + 'px';
-                        gallery1.style.left = gallery.scrollWidth + pos + 'px';
+                        gallery_1.style.left = pos + 'px';
                         interval = requestAnimationFrame(update);
                     }
                     update();
+
+
             
                     arrowLeft.onclick = ()=>{
                         if (localStorage.getItem("selected-image") =="0"){
-                            localStorage.setItem("selected-image", images1.length - 1);
-                            imageContainer.style.backgroundImage =   "url(" + gallery.children[parseInt(localStorage.getItem("selected-image"))].src + ")";
+                            localStorage.setItem("selected-image", images.length - 1);
+                            container.style.backgroundImage =   "url(" + gallery.children[images.length - 1].src + ")";
                         } else {
-                            localStorage.setItem("selected-image", parseInt(localStorage.getItem("selected-image")) - 1);
-                            imageContainer.style.backgroundImage = `url(${gallery.children[parseInt(localStorage.getItem("selected-image"))].src})`;
+                            localStorage.setItem("selected-image", localStorage.getItem("selected-image") - 1);
+                            container.style.backgroundImage = `url(${gallery.children[parseInt(localStorage.getItem("selected-image"))].src})`;
                         }
                     };
                     arrowRight.addEventListener("click", ()=>{
 
-                        if (localStorage.getItem("selected-image") == images1.length - 1){
+                        if (localStorage.getItem("selected-image") == images.length - 1){
                             localStorage.setItem("selected-image", "0");
-                            imageContainer.style.backgroundImage =   "url(" + gallery.children[parseInt(localStorage.getItem("selected-image"))].src + ")";
+                            container.style.backgroundImage =   "url(" + gallery.children[0].src + ")";
                         } else {
                             localStorage.setItem("selected-image", parseInt(localStorage.getItem("selected-image")) + 1);
-                            imageContainer.style.backgroundImage =   "url(" + gallery.children[parseInt(localStorage.getItem("selected-image"))].src + ")";
+                            container.style.backgroundImage =   "url(" + gallery.children[parseInt(localStorage.getItem("selected-image"))].src + ")";
                         }
                     });
-                    
-                    if(localStorage.getItem("selected-image") != null){
-                        imageContainer.style.backgroundImage =  "url(" + gallery.children[localStorage.getItem("selected-image")].src + ")";
-                    } else {
-                        imageContainer.style.backgroundImage = "url(" + data[0].thumbnail.url + ")";
-                        localStorage.setItem("selected-image", 0);
 
+                    if(localStorage.getItem("selected-image") != null){
+                        container.style.backgroundImage =  "url(" + gallery.children[localStorage.getItem("selected-image")].src + ")";
+                    } else {
+                        container.style.backgroundImage = "url(" + gallery.children[0].src + ")";
+                        localStorage.setItem("selected-image", 0);
                     }
+
 
                 }
                 catch(err){
@@ -256,44 +246,30 @@ window.addEventListener("load", function(){
         })
     }
 
-    let header = document.getElementById("header");
-    let hero = document.getElementById("hero-section");
-
-    document.onscroll = function(){
-        if(document.documentElement.scrollTop > hero.clientHeight){
-            if(!header.classList.contains("solid-header")){
-                header.classList.add("solid-header");
-                header.classList.remove("p-3");
-            }
-        } else {
-            if(header.classList.contains("solid-header")){
-                header.classList.remove("solid-header");
-                header.classList.add("p-3");
-            }
-        }
-
-    }
-
 
     
-    let menuBtn = document.getElementById("menu-btn");
-    let mobileMenu = document.getElementById("mobile-menu");
-    let closeButton = document.getElementById("close-btn");
-
-    menuBtn.addEventListener("click", function() {
-        mobileMenu.style.display = "block";
+    $(document).scroll(function(){
+        if(this.documentElement.scrollTop > this.documentElement.clientHeight){
+            $("#header").addClass("solid-header");
+            $("#header").removeClass("p-3");
+        } else {
+            $("#header").removeClass("solid-header");
+            $("#header").addClass("p-3");
+        }
     })
 
-    closeButton.addEventListener("click", function() {
-        mobileMenu.style.display = "none";
+    
+    $("#menu-btn").click(function(){
+        $("#mobile-menu").css("display", "block");
     })
-
-    let mobileMenuItems = document.getElementsByClassName("mobile-menu-item");
-    for (let i = 0; i < mobileMenuItems.length; i++) {
-        mobileMenuItems[i].addEventListener("click", function() {
-            mobileMenu.style.display = "none";
+    $("#close-btn").click(function(){
+        $("#mobile-menu").css("display", "none");
+    })
+    $(".mobile-menu-item").each(function(){
+        $(this).click(function(){
+            $("#mobile-menu").css("display", "none");
         })
-    };
+    })
             
 
     var map = L.map('map', {
@@ -310,13 +286,17 @@ window.addEventListener("load", function(){
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([39.006525477492744, 23.210849951479815]).addTo(map)
-        .bindPopup('Pefki Villas:<br> 39.006525477492744, 23.210849951479815')
-        .openPopup();
+    L.marker([39.00662164313321, 23.2107612490654]).addTo(map).bindPopup('Pefki Villas:<br> 39.00662164313321, 23.2107612490654').openPopup();
 
-    let mapButtons = document.getElementsByClassName("map");
-    for (let i = 0; i < mapButtons.length; i++) {
-        mapButtons[i].addEventListener("click", function(){
+    map.on('click', function(ev) {
+        alert("Coordinates of clicked point are: " + ev.latlng.lat + ', ' + ev.latlng.lng);
+    });
+
+    L.marker([39.007309449817285, 23.21081489324574]).addTo(map);
+
+
+    $(".map").each(function(){
+        this.onclick=function(){
             let id = this.id;
             switch(id){
                 case "plus":
@@ -326,8 +306,10 @@ window.addEventListener("load", function(){
                     map.zoomOut(1);
                     break;
             }
-        })
-    }
+
+        }
+    })
+
 
 })
 

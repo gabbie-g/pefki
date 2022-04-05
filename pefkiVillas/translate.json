@@ -1,0 +1,317 @@
+{   
+    "link0" :{
+        "gr": "αρχικη σελιδα",
+        "eng": "home",
+        "ro": "acasă",
+        "sr": "početna"
+    },
+
+    "link1" : {
+        "gr": "λιγα λογια για μας",
+        "eng": "about us",
+        "ro": "despre noi",
+        "sr": "o nama"
+    },
+
+    "link2" : {
+        "gr": "που βρισκομαστε",
+        "eng": "how to find us",
+        "ro": "unde suntem",
+        "sr": "gde se nalazimo"
+    },
+
+    "link3" : {
+        "gr": "Επικοινωνια",
+        "eng": "contact",
+        "ro": "contact",
+        "sr": "kontakt"
+    },
+
+    "header" : {
+        "gr": "ο προορισμος των διακοπων σας",
+        "eng": "your holiday destination",
+        "ro": "destinația ta de vacanță",
+        "sr": "tvoja letnja destinacija"
+    },
+
+    "header1" : {
+        "gr": "υπεροχες καλοκαιρινες διακοπες",
+        "eng": "great summer vacation",
+        "ro": "locul tău de odihnă",
+        "sr": "tvoje mesto za odmor"
+    },
+
+    "p1" : {
+        "gr": "Ιδανικό μέρος για χαλάρωση και απόλαυση των καλοκαιρινών ημερών",
+        "eng": "Perfect place to relax and enjoy the summer days",
+        "ro": "Un loc perfect pentru odihnă și relaxare",
+        "sr": "Savršeno za nezaboravne trenutke"
+    },
+
+    "p2" : {
+        "gr": "Το Πευκί θεωρείται ένας από τους κορυφαίους προορισμούς διακοπών στη Βόρεια Εύβοια, καθώς διαθέτει μια ανεπτυγμένη τουριστική υποδομή και προσφέρει εξαιρετικές ξενοδοχειακές μονάδες, δωμάτια, διαμερίσματα και στούντιο καθ 'όλη τη διάρκεια του έτους. Αν θέλετε ένα χαλαρωτικό διάλειμμα από τον έντονο ρυθμό της καθημερινής ζωής, το Πευκί είναι το ιδανικό μέρος.",
+        "eng": "Pefki is considered one of the premier vacation destinations in North Evia, since it has a highly developed tourist infrastructure and offers excellent hotel accommodation, rooms, apartments and studios throughout the course of the year. If you want a relaxing break away from the hectic pace of everyday life, Pefki is the perfect place.",
+        "ro": "Pefki e considerat una din cele mai atractive destinații din Nordul Eviei, de vreme ce poate oferi turiștilor tot ceea ce au nevoie, inclusiv cazare la hotel sau în apartamente tot timpul anului. Dacă ceea ce cauți este un loc în care să te poți relaxa și uita de problemele zilnice, Pefki este alegerea perfectă.",
+        "sr": "Pefki se smatra kao jedna od najatraktivnjih destinacija na severu Evie, nudi turistima sve što im je potrebno, između ostalog smeštaj u hotelima ili apartmanima preko cele godine. Ako to što želiš jeste da zaboraviš na svakodnevni ritam života, Pefki jeste savršen izbor."
+    },
+
+    "header41" : {
+        "gr": "μεγαλη παραλια",
+        "eng": "large beach",
+        "ro": "plaja",
+        "sr": "dugačka plaža"
+    },
+
+    "header42" : {
+        "gr": "καθημερινες κρουαζιερες",
+        "eng": "daily cruises",
+        "ro": "croaziere zilnice",
+        "sr": "svakodnevne ture"
+    },
+
+    "header43" : {
+        "gr": "ψαροταβερνες",
+        "eng": "fish tavernas",
+        "ro": "restaurante pescărești",
+        "sr": "riblji restorani"
+    },
+
+    "list_0" : {
+        "gr": "μεγάλη παραλία",
+        "eng": "long and large beach",
+        "ro": "o plajă încăpătoare",
+        "sr": "velika plaža"
+    },
+
+    "list_1" : {
+        "gr": "καλά οργανωμένο:",
+        "eng": "well organized:",
+        "ro": "organizată:",
+        "sr": "organizovana:"
+    },
+
+    "list_2" : {
+        "gr": "ξαπλώστρες και ομπρέλες",
+        "eng": "sun-beds and umbrellas",
+        "ro": "șezlonguri și umbrele de soare",
+        "sr": "ležaljke i suncobrani"
+    },
+
+    "list_3" : {
+        "gr": "ντους",
+        "eng": "showers",
+        "ro": "dușuri",
+        "sr": "tuševi"
+    },
+
+    "list_4" : {
+        "gr": "αλλαξιέρες",
+        "eng": "changing cabins",
+        "ro": "cabine de schimb",
+        "sr": "kabine za presvlačenje"
+    },
+
+    "list_5" : {
+        "gr": "γήπεδα βόλεϊ",
+        "eng": "playgrounds",
+        "ro": "terenuri de volei",
+        "sr": "igrališta"
+    },
+
+    "p5" : {
+        "gr": "Οι κρουαζιέρες οργανώνονται κάθε μέρα ή τουλάχιστον μία φορά την εβδομάδα, σύμφωνα με τη αναζήτηση των τουριστών μας. Τα πιο δημοφιλή είναι τα ταξίδια προς:",
+        "eng": "Cruises are organized every day or at least once per week, according to the interests of our tourists. The most populars are the trips to:",       
+        "ro": "Croazierele se organizeaza în fiecare zi, sau cel puțin o dată pe săptămână, în funcție de numărul de turiști care sunt interesați de acestea. Cele mai populare ture sunt:",
+        "sr": "Ture sa brodićem ima svakog dana, ili najmanje jedan put nedeljno, u zavisnosti od broja zainteresovanih turista. Najpopularnije ture su:"
+    },
+
+    "list6" : {
+        "gr": "Σκιάθος"
+    },
+
+    "list7" : {
+        "gr": "Σκόπελος και Αλόννησος",
+        "eng": "Skopelos and Alonnisos",
+        "ro": "Skopelos și Alonnisos",
+        "sr": "Skopelos i Alonnisos"
+    },
+
+    "list8" : {
+        "gr": "Λιχάδες"
+    },
+
+    "header3" : {
+        "gr": "εξαιρετικη ΕΠΙΛΟΓΗ",
+        "eng": "excellent choice",
+        "ro": "o alegere perfectă",
+        "sr": "savršen izbor"
+    },
+
+    "p6" : {
+        "gr": "Το Pefki Villas παρέχει στα δωμάτια του τις παρακάτω παροχές:",
+        "eng": "Pefki Villas provides you rooms with the following facilities:",
+        "ro": "Pefki Villas îți pune la dispoziție camere cu următoarele facilități:",
+        "sr": "Pefki Villas ti stavlja na raspolaganje sobe sa sledećim dodacima:"
+    },
+
+    "list9" : {
+        "gr": "τηλεοραση",
+        "eng": "television",
+        "ro": "televizor",
+        "sr": "televizor"
+    },
+
+    "list10" : {
+        "gr": "κλιματισμός",
+        "eng": "air conditioning",
+        "ro": "aer condiționat",
+        "sr": "klimatizovano"
+    },
+
+    "list11" : {
+        "gr": "ψυγείο",
+        "eng": "refrigerator",
+        "ro": "frigider",
+        "sr": "frižider"
+    },
+    
+    "list12" : {
+        "gr": "κουζίνα",
+        "eng": "kitchen",
+        "ro": "bucătărie",
+        "sr": "kuhinja"
+    },
+
+    "list13" : {
+        "gr": "ηλεκτρική κουζίνα",
+        "eng": "cooking machine",
+        "ro": "reșou electric",
+        "sr": "šporet na struju"
+    },
+
+    "list14" : {
+        "gr": "ντους",
+        "eng": "shower",
+        "ro": "duș",
+        "sr": "tuš"
+    },
+
+    "list15" : {
+        "gr": "μπαλκόνι",
+        "eng": "balcony",
+        "ro": "terasă",
+        "sr": "terasa"
+    },
+
+    "list16" : {
+        "gr": "μπάρμπεκιου",
+        "eng": "barbecue",
+        "ro": "grătar",
+        "sr": "roštilj"
+    },
+
+    "list17" : {
+        "gr": "παιδική χαρά",
+        "eng": "playground",
+        "ro": "loc de joacă pentru copii",
+        "sr": "igralište za decu"
+    },
+
+    "list18" : {
+        "gr": "χώρος στάθμευσης",
+        "eng": "parking space",
+        "ro": "parcare în cadrul obiectului",
+        "sr": "parking"
+    },
+
+    "list19" : {
+        "gr": "δωρεάν Wi-Fi πρόσβαση στο internet",
+        "eng": "free WiFi internet access",
+        "ro": "conecția WiFi la internet",
+        "sr": "WiFi internet konekcija"
+    },
+
+    "button" : {
+        "gr": "pefki villas φοτο γαλλερι",
+        "eng": "pefki villas photo gallery",
+        "ro": "galeria foto vila Pefki",
+        "sr": "galerija foto vile Pefki"
+    },
+
+    "header3_2" : {
+        "gr": "Που βρισκομαστε",
+        "eng": "how to find us",
+        "ro": "unde suntem",
+        "sr": "gde se nalazimo"
+    },
+
+    "p7" : {
+        "gr": "Αν έρχεστε με το αυτοκίνητο, μπορεί να σας ενδιαφέρουν τα δρομολόγια των φέρι μποτ από τη Γλύφα προς τον Αγιόκαμπο. Εάν ναι, κάντε κλικ σε αυτόν τον σύνδεσμο:",
+        "eng": "If you come by car, you may be interested in the timetable of the ferries from Glypha to Agyocampos. If so, please click on this link:",
+        "ro": "Dacă veniți la mare cu mașina dvs și vă interesează orarul feriboturilor dintre Glypha și Agyokampos, vă rugăm să vizitați următoarea adresă:",
+        "sr": "Ako dolazite kolima i budite li zainteresovani za program trajekta između Glife i Agyokamposa, možete da kliknete na sledeći link:"
+    },
+
+    "p8" : {
+        "gr": "Μόλις φτάσετε στο Πευκί, μόλις 100 μέτρα από την παραλία, το Pefki Villas είναι έτοιμο να καλωσορίσει εσας και την οικογένειά σας. Κοντά σε εμάς βρίσκοντε τα σούπερ μάρκετ και ταβέρνες. <br> Έχετε επίσης συντεταγμένες GPS στον παρακάτω χάρτη!",
+        "eng": "Once in Pefki, just 100 meters from the beach Pefki Villas is ready to welcome you and your family. Close to us you can find super-markets and taverns. <br>Please have a look on the map below!",
+        "ro": "Odată ajunși la destinație, la numai 100m de plajă se află vila Pefki, gata să vă ofere o primire călduroasă. În apropierea vilei se află supermarkete și taverne. <br>Pe harta de mai jos aveți și coordinatele vilei Pefki!",
+        "sr": "Kada ste stigli u Pefki, samo 100 metara od plaže nalazi se naša vila Pefki, spremna da ti poželi dobrodošlicu. Blizu naše vile nalaze se supermarketi i taverne. <br>Na mapi ispod imate i GPS koordinate!"
+    },
+
+    "link11" : {
+        "gr": "Πλοία από / προς τη Γλύφα-Αγυόκαμπο",
+        "eng": "Ferries to/from Glypha-Agyocampos",
+        "ro": "Ferries de la/la Glypha-Agyocampos",
+        "sr": "Ferries od/do Glyfe-Agyokamposa"
+    },
+
+    "h3_3" : {
+        "gr": "Καλωσοριστε!",
+        "eng": "you are welcome!",
+        "ro": "sunteți bineveniți!",
+        "sr": "dobrodošli!"
+    },
+
+    "p9" : {
+        "gr": "Πeρασtε σε μας!",
+        "eng": "come on in!",
+        "ro": "treceți pe la noi!",
+        "sr": "letujte kod nas!"
+    },
+    
+    "h4_2" : {
+        "gr": "check-in",
+        "eng": "check-in",
+        "ro": "intrarea în apartament",
+        "sr": "vreme ulaska u sobe"
+    },
+    
+    "h4_3" : {
+        "gr": "check-out",
+        "eng": "check-out",
+        "ro": "ieșirea din apartament",
+        "sr": "vreme izlaska iz sobe"
+    },
+
+    "h3_4" : {
+        "gr": "Επικοινωνiα",
+        "eng": "contact",
+        "ro": "contact",
+        "sr": "kontakt"
+    },
+
+    "h4_4" : {
+        "gr": "τηλεφωνο",
+        "eng": "phone",
+        "ro": "telefon",
+        "sr": "telefon"
+    },
+
+    "h4_6" : {
+        "gr": "Διεuθυνση",
+        "eng": "address",
+        "ro": "adresa",
+        "sr": "adresa"
+    }
+}
