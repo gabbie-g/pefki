@@ -21,7 +21,7 @@
     }
 }
 
-@media (min-width: 998px) {
+@media (min-width: 1200px) {
     :root{
         font-size: 19px;
     }
@@ -305,54 +305,58 @@ div#flags img{
     display: flex;
 }
 #gallery-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+    flex-shrink     : 0;
+    margin-bottom   : 10px;
+}
+#gallery-header h2{
+    margin-bottom   : 3px;
 }
 #gallery-close-button{
-    width: 32px;
-    height: 32px;
-    background-image    : url(../gallery-images/close-icon.svg);
-    cursor: pointer;
+    width           : 32px;
+    height          : 32px;
+    background-image: url(../gallery-images/close-icon.svg);
+    cursor          : pointer;
 }
 #gallery-close-button:hover{
-    transform: scale(1.2);
+    transform       : scale(1.2);
 }
 #photo-gallery {
-    width: 95%;
-    height: 95%;
-    max-height: 1000px;
-    padding: 10px 16px 16px;
+    width           : 95%;
+    height          : 95%;
+    max-height      : 1000px;
+    padding         : 10px 16px 16px;
     background-color: rgb(25, 25, 25);
-    z-index: 1;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    z-index         : 1;
+    margin          : auto;
+    display         : flex;
+    flex-direction  : column;
+    overflow        : hidden;
 }
 #gallery-container{
-    overflow: hidden;
-    display: flex;
-    flex-grow: 1;
+    overflow        : hidden;
+    display         : flex;
+    flex-grow       : 1;
 }
 .gallery{
-    display: flex;
-    position: relative;
+    display         : flex;
+    position        : relative;
 }
 
 .gallery>img{
-    margin-right: 8px; 
-    height: 100%;
+    margin-right    : 8px; 
+    height          : 100%;
 }
 
 #container{
-    position: relative;            
-    display: none;
-    flex-grow: 1;
-    background-repeat : no-repeat;
+    position        : relative;            
+    display         : none;
+    flex-grow       : 1;
+    background-repeat   : no-repeat;
     background-position : center;
-    background-size : cover;
+    background-size     : cover;
 }
 
 @media (min-height: 540px){
